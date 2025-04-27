@@ -12,8 +12,6 @@ services:
       - mongo
     env_file:
       - .env
-    networks:
-      payload:
     command: npm run dev
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000"]
@@ -30,8 +28,6 @@ services:
       - data:/data/db
     ports:
       - "27017:27017"
-    networks:
-      payload:
     healthcheck:
       test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017 --quiet
       interval: 5s
@@ -41,6 +37,3 @@ services:
 volumes:
   data:
   node_modules:
-
-networks:
-  payload:
