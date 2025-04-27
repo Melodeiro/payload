@@ -41,4 +41,3 @@ volumes:
 
 networks:
   payload:
-    external: true
