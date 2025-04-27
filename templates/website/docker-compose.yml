@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: builder
-      network: payload
+      networks: payload
     volumes:
       - .:/app
       - node_modules:/app/node_modules
