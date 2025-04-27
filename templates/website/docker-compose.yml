@@ -10,6 +10,8 @@ services:
       - mongo
     env_file:
       - .env
+    networks:
+      payload:
 
   mongo:
     image: mongo:latest
@@ -17,10 +19,14 @@ services:
       - --storageEngine=wiredTiger
     volumes:
       - data:/data/db
-    deploy:
-      labels:
-        payload-mongo:
+    networks:
+      payload:
+        aliases:
+          - payload-mongo
 
 volumes:
   data:
   node_modules:
+
+networks:
+  payload:
