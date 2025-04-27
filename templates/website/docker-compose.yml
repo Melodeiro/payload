@@ -21,8 +21,6 @@ services:
       - data:/data/db
     networks:
       payload:
-        aliases:
-          - payload-mongo
 
 volumes:
   data:
