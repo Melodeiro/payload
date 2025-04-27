@@ -17,6 +17,9 @@ services:
       - --storageEngine=wiredTiger
     volumes:
       - data:/data/db
+    deploy:
+      labels:
+        payload-mongo
 
 volumes:
   data:
