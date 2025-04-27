@@ -7,7 +7,7 @@ services:
       - .:/app
       - node_modules:/app/node_modules
     working_dir: /app/
-    command: sh -c "yarn install && yarn dev"
+    command: sh -c "pnpm install && pnpm dev"
     depends_on:
       - mongo
     env_file:
