@@ -1,9 +1,11 @@
 services:
   payload:
-    image: node:18-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - node_modules:/node_modules
-    command: sh -c "pnpm install && pnpm dev"
+      - .:/app
+      - node_modules:/app/node_modules
     depends_on:
       - mongo
     env_file:
