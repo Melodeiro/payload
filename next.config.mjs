@@ -14,7 +14,6 @@ const withBundleAnalyzer = bundleAnalyzer({
 const config = withBundleAnalyzer(
   withPayload(
     {
-      output: 'standalone',
       eslint: {
         ignoreDuringBuilds: true,
       },
