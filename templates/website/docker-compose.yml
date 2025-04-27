@@ -2,7 +2,6 @@ services:
   payload:
     image: node:18-alpine
     volumes:
-      - .:.
       - node_modules:/node_modules
     command: sh -c "pnpm install && pnpm dev"
     depends_on:
