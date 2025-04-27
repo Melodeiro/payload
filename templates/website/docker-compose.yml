@@ -1,12 +1,9 @@
-version: '3'
-
 services:
   payload:
     image: node:18-alpine
     volumes:
-      - .:/app
-      - node_modules:/app/node_modules
-    working_dir: /app/
+      - .:/
+      - node_modules:/node_modules
     command: sh -c "pnpm install && pnpm dev"
     depends_on:
       - mongo
