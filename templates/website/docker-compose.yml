@@ -19,7 +19,7 @@ services:
       - data:/data/db
     deploy:
       labels:
-        payload-mongo
+        payload-mongo:
 
 volumes:
   data:
