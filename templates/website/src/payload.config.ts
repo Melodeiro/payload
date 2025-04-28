@@ -91,4 +91,13 @@ export default buildConfig({
     },
     tasks: [],
   },
+  endpoints: [
+    {
+      path: '/health',
+      method: 'get',
+      handler: (req, res) => {
+        res.status(200).send('OK')
+      },
+    },
+  ],
 })
