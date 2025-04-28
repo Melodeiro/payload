@@ -95,8 +95,8 @@ export default buildConfig({
     {
       path: '/health',
       method: 'get',
-      handler: (req, res) => {
-        res.status(200).send('OK')
+      handler: async (req) => {
+        return Response.json({ status: 'OK' }, { status: 200 })
       },
     },
   ],
