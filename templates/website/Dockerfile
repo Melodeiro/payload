@@ -1,4 +1,6 @@
 FROM node:23-alpine AS base
+# Install curl for healthchecks
+RUN apk add --no-cache curl
 # Install dependencies only when needed
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
