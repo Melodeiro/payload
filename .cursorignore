@@ -1,0 +1,6 @@
+/*
+!templates/
+templates/*
+!templates/website
+!.cursor
+!.cursorignore

@@ -20,7 +20,6 @@ const config = withBundleAnalyzer(
       typescript: {
         ignoreBuildErrors: true,
       },
-      output: 'standalone',
       experimental: {
         fullySpecified: true,
         serverActions: {
